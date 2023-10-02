@@ -16,6 +16,7 @@ namespace Homeworks
             //ExerciseFour();
             ExerciseFive();
         }
+
         private static void ExerciseOne()
         {
             Console.WriteLine("Rejestracja pracownika: \r\n 1. Podaj imie: ");
@@ -23,9 +24,13 @@ namespace Homeworks
             Console.WriteLine($"2. Podaj naazwisko: ");
             string surname = Console.ReadLine();
             Console.WriteLine("3. Podaj wiek: ");
-            int age = int.Parse(Console.ReadLine());
+            int age;
+            string input = Console.ReadLine();
+            bool trueFalse= int.TryParse(input, out age);
             Console.WriteLine("4. Podaj plec: ");
-            char gender = char.Parse(Console.ReadLine());
+            char gender;
+            input = Console.ReadLine();
+            trueFalse = char.TryParse(input, out gender);
             Console.WriteLine("5. Podaj PESEL: ");
             string personalId = Console.ReadLine();
             Console.WriteLine("6. Podaj nr pracownika: ");
@@ -46,23 +51,22 @@ namespace Homeworks
         private static void ExerciseThree()
         {
             Console.WriteLine($"###### Oblicznie przekatnej prostokata ###### \r\n Podaj dl podstawy:");
-            double a = double.Parse(Console.ReadLine());
+            double a;
+            string input = Console.ReadLine();
+            bool TrueFalse = double.TryParse(input, out a);
             Console.WriteLine($"Podaj dl boku:");
-            double b = double.Parse(Console.ReadLine());
-
+            double b; 
+            input = Console.ReadLine();
+            TrueFalse = double.TryParse(input, out b);
             double diagonal = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
             Console.WriteLine(Math.Round(diagonal, 2));
         }
 
         private static void ExerciseFour()
         {
-            int a;
-            string b;
-            double c;
-
-            a = 10;
-            b = "Szkola Dotneta";
-            c = 12.5;
+            int a = 10;
+            string b = "Szkola Dotneta";
+            double c = 12.5;
 
             Console.WriteLine(a + "\n\r" + b + "\n\r" + c);
         }
@@ -74,27 +78,32 @@ namespace Homeworks
             Console.WriteLine($"2. Podaj naazwisko: ");
             string surname = Console.ReadLine();
             Console.WriteLine("3. Podaj wiek: ");
-            int age = int.Parse(Console.ReadLine());
+            int age;
+            string input = Console.ReadLine();
+            bool trueFalse = int.TryParse(input, out age);
             Console.WriteLine("4. adres e-mail: ");
             string gender = Console.ReadLine();
             Console.WriteLine("5. Podaj adres: ");
             string adress = Console.ReadLine();
             Console.WriteLine("6. Podaj nr buta: ");
-            double shoeSize = double.Parse(Console.ReadLine());
+            double shoeSize; 
+            input = Console.ReadLine();
+            trueFalse = double.TryParse(input, out shoeSize);
             Console.WriteLine("7. Podaj kolor oczu: ");
             string eyeColor = Console.ReadLine();
             Console.WriteLine("8. Podaj kolor wlosow: ");
             string hairColor = Console.ReadLine();
             Console.WriteLine("9. Podaj wage: ");
-            double weight = double.Parse(Console.ReadLine());
+            double weight;
+            input = Console.ReadLine();
+            trueFalse = double.TryParse(input, out weight);
             Console.WriteLine("10. Podaj ile masz wzrosu:");
-            int height = int.Parse(Console.ReadLine());
+            int height; 
+            input = Console.ReadLine();
+            trueFalse = int.TryParse(input, out height);
 
             Console.WriteLine(name + "\n\r" + surname + "\n\r" + age + "\n\r" + gender + "\n\r" + adress + "\n\r" 
-                                + shoeSize + "\n\r" + eyeColor + "\n\r" + hairColor + "\n\r" + weight + "\n\r" + height);
+                              + shoeSize + "\n\r" + eyeColor + "\n\r" + hairColor + "\n\r" + weight + "\n\r" + height);
         }
-
-
-
     }
 }
