@@ -26,11 +26,11 @@ namespace Homeworks
             Console.WriteLine("3. Podaj wiek: ");
             int age;
             string input = Console.ReadLine();
-            bool trueFalse= int.TryParse(input, out age);
+            int.TryParse(input, out age);
             Console.WriteLine("4. Podaj plec: ");
             char gender;
             input = Console.ReadLine();
-            trueFalse = char.TryParse(input, out gender);
+            char.TryParse(input, out gender);
             Console.WriteLine("5. Podaj PESEL: ");
             string personalId = Console.ReadLine();
             Console.WriteLine("6. Podaj nr pracownika: ");
@@ -53,11 +53,11 @@ namespace Homeworks
             Console.WriteLine($"###### Oblicznie przekatnej prostokata ###### \r\n Podaj dl podstawy:");
             double a;
             string input = Console.ReadLine();
-            bool TrueFalse = double.TryParse(input, out a);
+            double.TryParse(input, out a);
             Console.WriteLine($"Podaj dl boku:");
             double b; 
             input = Console.ReadLine();
-            TrueFalse = double.TryParse(input, out b);
+            double.TryParse(input, out b);
             double diagonal = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
             Console.WriteLine(Math.Round(diagonal, 2));
         }
@@ -80,7 +80,7 @@ namespace Homeworks
             Console.WriteLine("3. Podaj wiek: ");
             int age;
             string input = Console.ReadLine();
-            bool trueFalse = int.TryParse(input, out age);
+            int.TryParse(input, out age);
             Console.WriteLine("4. adres e-mail: ");
             string gender = Console.ReadLine();
             Console.WriteLine("5. Podaj adres: ");
@@ -88,7 +88,7 @@ namespace Homeworks
             Console.WriteLine("6. Podaj nr buta: ");
             double shoeSize; 
             input = Console.ReadLine();
-            trueFalse = double.TryParse(input, out shoeSize);
+            double.TryParse(input, out shoeSize);
             Console.WriteLine("7. Podaj kolor oczu: ");
             string eyeColor = Console.ReadLine();
             Console.WriteLine("8. Podaj kolor wlosow: ");
@@ -96,11 +96,11 @@ namespace Homeworks
             Console.WriteLine("9. Podaj wage: ");
             double weight;
             input = Console.ReadLine();
-            trueFalse = double.TryParse(input, out weight);
+            double.TryParse(input, out weight);
             Console.WriteLine("10. Podaj ile masz wzrosu:");
             int height; 
             input = Console.ReadLine();
-            trueFalse = int.TryParse(input, out height);
+            int.TryParse(input, out height);
 
             Console.WriteLine(name + "\n\r" + surname + "\n\r" + age + "\n\r" + gender + "\n\r" + adress + "\n\r" 
                               + shoeSize + "\n\r" + eyeColor + "\n\r" + hairColor + "\n\r" + weight + "\n\r" + height);
